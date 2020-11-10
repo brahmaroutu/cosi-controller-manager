@@ -1,6 +1,6 @@
 FROM gcr.io/distroless/static:latest
 LABEL maintainers="Kubernetes Authors"
-LABEL description="COSI Controller"
+LABEL description="ObjectStorage Controller"
 
-COPY ./bin/cosi-controller-manager cosi-controller-manager
-ENTRYPOINT ["/cosi-controller-manager"]
+COPY ./bin/objectstorage-controller objectstorage-controller
+ENTRYPOINT ["/controller-manager"]

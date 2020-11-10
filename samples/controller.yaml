@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cosi-controller
+  name: objectstorage-controller
   labels:
-    run: cosi-controller
+    run: objectstorage-controller
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cosi-controller
+      app: objectstorage-controller
   template:
     metadata:
       labels:
-        app: cosi-controller
+        app: objectstorage-controller
     spec:
       containers:
-        - name: cosi-controller
-          image: cosi-controller
+        - name: objectstorage-controller
+          image: quay.io/containerobjectstorage/objectstorage-controller:latest
           imagePullPolicy: IfNotPresent
 
